@@ -6,7 +6,7 @@ let cardIds = [];
 let val1 = "";
 let val2 = "";
 let matchedCards = 0;
-
+let uWon = "";
 shuffleCards();
 for (let card of cards) {
   card.addEventListener("click", flipped);
@@ -58,7 +58,7 @@ function flipped() {
     }
     if (matchedCards === 8) {
       let wrap = document.querySelector("#wrap");
-      let uWon = document.createElement("h1");
+      uWon = document.createElement("h1");
       uWon.innerText = "Congratulations! You won!";
       wrap.appendChild(uWon);
     }
@@ -70,6 +70,7 @@ resetBtn.addEventListener("click", resetGame);
 function resetGame() {
   flipCards = [];
   matchedCards = 0;
+  uWon.innerText = "";
   score.innerText = `Your Score: ${matchedCards}`;
   cards.forEach((card) => {
     card.querySelector(".card-inner").classList.remove("flipped");
