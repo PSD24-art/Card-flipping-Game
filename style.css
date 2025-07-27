@@ -6,7 +6,7 @@ body {
   justify-content: start;
   align-items: center;
   flex-direction: column;
-  background-color: #f9f9f9;
+  background-color: antiquewhite;
   font-family: sans-serif;
 }
 
@@ -62,9 +62,9 @@ h2 {
 .card-front {
   background: linear-gradient(
     35deg,
-    rgb(77, 195, 242),
-    rgb(216, 238, 247),
-    rgb(77, 195, 242)
+    rgb(113, 0, 113),
+    rgb(255, 53, 53),
+    rgb(79, 20, 79)
   );
   font-weight: bold;
 }
@@ -81,16 +81,25 @@ h2 {
   object-fit: contain;
 }
 
+.btn {
+  margin-top: 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 button {
   height: 2rem;
   width: 6rem;
-  background-color: #5bbdd8;
+  background-color: brown;
   color: rgb(0, 0, 0);
-  font-size: 1rem;
+  font-size: 1.3rem;
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.4s ease;
   box-shadow: 0 0 5px black;
+  color: #fff;
 }
 
 button:hover {
@@ -99,4 +108,10 @@ button:hover {
 
 .red-border {
   box-shadow: 0 0 20px red;
+}
+
+@media (max-width: 430px) {
+  body {
+    transform: scale(0.86);
+  }
 }
